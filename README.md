@@ -55,5 +55,5 @@ wiringX is available in the Arch Linux ARM repository. To install, simply:
 ```
 pacman -S wiringx-git
 ```
-Pin numbering of the Raspberry Pi, Hummingboard, BananaPi and Radxa Rock can be found here:
+Pin numbering of the Raspberry Pi, Hummingboard, BananaPi, Radxa Rock and Milk-V  can be found here:
 http://wiringx.org/

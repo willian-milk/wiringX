@@ -20,6 +20,7 @@ modules = [
 			'../src/soc/broadcom/2835.c',
 			'../src/soc/broadcom/2836.c',
 			'../src/soc/broadcom/2711.c',
+			'../src/soc/thead/thead1520.c',
 			'../src/soc/nxp/imx6sdlrm.c',
 			'../src/soc/nxp/imx6dqrm.c',
 			'../src/soc/samsung/exynos5422.c',
@@ -47,7 +48,8 @@ modules = [
 			'../src/platform/solidrun/hummingboard_gate_edge_sdl.c',
 			'../src/platform/radxa/rock4.c',
 			'../src/platform/radxa/rock5b.c',
-			'../src/platform/milkv/duo.c'
+			'../src/platform/milkv/duo.c',
+			'../src/platform/milkv/meles.c'
 		],
 		include_dirs=['../src/']
 	),

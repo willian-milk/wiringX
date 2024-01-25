@@ -98,7 +98,8 @@ file(GLOB wiringx
 	"${PROJECT_SOURCE_DIR}/src/platform/radxa/*.h"
 	"${PROJECT_SOURCE_DIR}/src/platform/milkv/*.c"
 	"${PROJECT_SOURCE_DIR}/src/platform/milkv/*.h"
-
+	"${PROJECT_SOURCE_DIR}/src/platform/milkv/*.c"
+	"${PROJECT_SOURCE_DIR}/src/platform/milkv/*.h"
 	"${PROJECT_SOURCE_DIR}/src/soc/*.c"
 	"${PROJECT_SOURCE_DIR}/src/soc/*.h"
 	"${PROJECT_SOURCE_DIR}/src/soc/allwinner/*.c"
@@ -115,7 +116,8 @@ file(GLOB wiringx
 	"${PROJECT_SOURCE_DIR}/src/soc/rockchip/*.h"
 	"${PROJECT_SOURCE_DIR}/src/soc/sophgo/*.c"
 	"${PROJECT_SOURCE_DIR}/src/soc/sophgo/*.h"
-
+	"${PROJECT_SOURCE_DIR}/src/soc/thead/*.c"
+	"${PROJECT_SOURCE_DIR}/src/soc/thead/*.h"
 )
 
 add_library(wiringx_static STATIC ${wiringx})

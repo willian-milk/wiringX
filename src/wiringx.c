@@ -244,6 +244,7 @@ static void wiringXInit(void) {
 	rk3399Init();
 	rk3588Init();
 	cv180xInit();
+	th1520Init();
 
 	/* Init all platforms */
 	pcduino1Init();
@@ -268,6 +269,7 @@ static void wiringXInit(void) {
 	rock4Init();
 	rock5bInit();
 	milkv_duoInit();
+	melesInit();
 }
 
 EXPORT int wiringXSetup(char *name, void (*func)(int, char *, int, const char *, ...)) {

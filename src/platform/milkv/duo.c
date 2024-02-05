@@ -25,22 +25,37 @@
 struct platform_t *duo = NULL;
 
 static int map[] = {
-	/*	NULL	XGPIOA[28] XGPIOA[29] GND	*/
-	-1,	0,	1,	-1,
-	/*	PWR_GPIO[26] PWR_GPIO[25] PWR_GPIO[19] PWR_GPIO[20]	*/
-	2,	3,	5,	4,
-	/*	GND	PWR_GPIO[23]	PWR_GPIO[22]	PWR_GPIO[21]	*/
-	-1,	6,	7,	8,
-	/*	PWR_GPIO[18]	GND	XGPIOC[9] XGPIOC[10]	*/
-	9,	-1,	10,	11,
-	/*	XGPIOA[16] XGPIOA[17]	GND	XGPIOA[14]	*/
-	12,	13,	-1,	14,
-	/*	XGPIOA[15]	XGPIOA[23]	XGPIOA[24]	GND	*/
-	15,	16,	17,	-1,
-	/*	XGPIOA[22]	XGPIOA[25]	XGPIOA[27]	XGPIOA[26]	*/
-	18,	19,	20,	21,
-	/*	GND	PWR_GPIO[4]	VCC	XGPIOB[3]	*/
-	-1,	22,	-1,	23,
+	/* XGPIOA[28]    XGPIOA[29]    PWR_GPIO[26]  PWR_GPIO[25] */
+	/* 0             1             2             3            */
+	   0,            1,            2,            3,
+
+	/* PWR_GPIO[19]  PWR_GPIO[20]  PWR_GPIO[23]  PWR_GPIO[22] */
+	/* 4             5             6             7            */
+	   4,            5,            6,            7,
+
+	/* PWR_GPIO[21]  PWR_GPIO[18]  XGPIOC[9]     XGPIOC[10]   */
+	/* 8             9             10            11           */
+	   8,            9,            10,           11,
+
+	/* XGPIOA[16]    XGPIOA[17]    XGPIOA[14]    XGPIOA[15]   */
+	/* 12            13            14            15           */
+	   12,           13,           14,           15,
+
+	/* XGPIOA[23]    XGPIOA[24]    XGPIOA[22]    XGPIOA[25]   */
+	/* 16            17            18            19           */
+	   16,           17,           18,           19,
+
+	/* XGPIOA[27]    XGPIOA[26]    PWR_GPIO[4]   NULL         */
+	/* 20            21            22            -            */
+	   20,           21,           22,           -1,
+
+	/* NULL          XGPIOC[24]    XGPIOB[3]     XGPIOB[6]    */
+	/* -             25            26            27           */
+	   -1,           25,           23,           24,
+
+	/* NULL          NULL          NULL          NULL         */
+	/* -             -             -             -            */
+	   -1,           -1,           -1,           -1
 };
 
 #define _sizeof(arr) (sizeof(arr) / sizeof(arr[0]))

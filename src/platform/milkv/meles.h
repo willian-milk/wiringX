@@ -14,6 +14,6 @@
 
 extern struct platform_t *milkv_meles;
 
-void melesInit(void);
+void milkv_melesInit(void);
 
 #endif

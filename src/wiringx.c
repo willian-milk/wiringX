@@ -269,7 +269,7 @@ static void wiringXInit(void) {
 	rock4Init();
 	rock5bInit();
 	milkv_duoInit();
-	melesInit();
+	milkv_melesInit();
 }
 
 EXPORT int wiringXSetup(char *name, void (*func)(int, char *, int, const char *, ...)) {

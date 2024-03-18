@@ -22,14 +22,14 @@
 #include "../platform.h"
 #include "meles.h"
 
-struct platform_t *meles = NULL;
+struct platform_t *milkv_meles = NULL;
 
 static int map[] = {
 	/*	GPIO0_17	I2S2_SCLK	GPIO2_25	GPIO2_24	*/
 			17,			-1,			88,			87,
 	/*	GPIO2_22	GPIO2_31	GPIO3_2		GPIO0_16	*/
 			85,			94,			97,			16,
-	/*	GPIO0_9		GPIO0_8		GPIO2_15	ADC			*/
+	/*	GPIO0_9		GPIO0_8		GPIO2_15	ADC	*/
 			9,			8,			78,			-1,
 	/*	GPIO2_16	GPIO2_17	GPIO2_14	UART0_TXD	*/
 			79,			80,			77,			63,
@@ -45,7 +45,7 @@ static int map[] = {
 
 #define _sizeof(arr) (sizeof(arr) / sizeof(arr[0]))
 
-static int melesValidGPIO(int pin) {
+static int milkv_melesValidGPIO(int pin) {
 	if(pin >= 0 && pin < _sizeof(map)) {
 		if(map[pin] == -1) {
 			return -1;
@@ -56,29 +56,29 @@ static int melesValidGPIO(int pin) {
 	}
 }
 
-static int melesSetup(void) {
-	meles->soc->setup();
-	meles->soc->setMap(map, _sizeof(map));
-	meles->soc->setIRQ(map, _sizeof(map));
+static int milkv_melesSetup(void) {
+	milkv_meles->soc->setup();
+	milkv_meles->soc->setMap(map, _sizeof(map));
+	milkv_meles->soc->setIRQ(map, _sizeof(map));
 	return 0;
 }
 
 void milkv_melesInit(void) {
-	platform_register(&meles, "meles");
+	platform_register(&milkv_meles, "milkv_meles");
 
-	meles->soc = soc_get("Thead", "TH1520");
-	meles->soc->setMap(map, _sizeof(map));
+	milkv_meles->soc = soc_get("Thead", "TH1520");
+	milkv_meles->soc->setMap(map, _sizeof(map));
 
-	meles->digitalRead = meles->soc->digitalRead;
-	meles->digitalWrite = meles->soc->digitalWrite;
-	meles->pinMode = meles->soc->pinMode;
-	meles->setup = &melesSetup;
+	milkv_meles->digitalRead = milkv_meles->soc->digitalRead;
+	milkv_meles->digitalWrite = milkv_meles->soc->digitalWrite;
+	milkv_meles->pinMode = milkv_meles->soc->pinMode;
+	milkv_meles->setup = &milkv_melesSetup;
 
-	meles->isr = meles->soc->isr;
-	meles->waitForInterrupt = meles->soc->waitForInterrupt;
+	milkv_meles->isr = milkv_meles->soc->isr;
+	milkv_meles->waitForInterrupt = milkv_meles->soc->waitForInterrupt;
 
-	meles->selectableFd = meles->soc->selectableFd;
-	meles->gc = meles->soc->gc;
+	milkv_meles->selectableFd = milkv_meles->soc->selectableFd;
+	milkv_meles->gc = milkv_meles->soc->gc;
 
-	meles->validGPIO = &melesValidGPIO;
+	milkv_meles->validGPIO = &milkv_melesValidGPIO;
 }

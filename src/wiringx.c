@@ -64,6 +64,7 @@
 #include "platform/radxa/rock4.h"
 #include "platform/radxa/rock5b.h"
 #include "platform/milkv/duo.h"
+#include "platform/milkv/meles.h"
 
 void wiringXDefaultLog(int prio, char *file, int line, const char *format_str, ...);
 

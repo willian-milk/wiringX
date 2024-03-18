@@ -63,7 +63,7 @@ static int melesSetup(void) {
 	return 0;
 }
 
-void melesInit(void) {
+void milkv_melesInit(void) {
 	platform_register(&meles, "meles");
 
 	meles->soc = soc_get("Thead", "TH1520");

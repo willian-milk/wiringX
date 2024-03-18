@@ -12,7 +12,7 @@
 
 #include "../platform.h"
 
-extern struct platform_t *meles;
+extern struct platform_t *milkv_meles;
 
 void melesInit(void);
 

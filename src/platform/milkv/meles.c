@@ -33,9 +33,9 @@ static int map[] = {
 			9,			8,			78,			-1,
 	/*	GPIO2_16	GPIO2_17	GPIO2_14	UART0_TXD	*/
 			79,			80,			77,			63,
-	/*	UART0_TXD	17	18	19	*/
+	/*	UART0_TXD	*/
 			64,			-1,			-1,			-1,
-	/*	20,	GPIO2_23	GPIO3_1	GPIO0_11	*/
+	/*						GPIO2_23	GPIO3_1	GPIO0_11	*/
 			-1,			86,			96,			11,
 	/*	I2S2-LRCK	GPIO3_0	GPIO0_10	GPIO3_3	*/
 			-1,			95,			10,			98,

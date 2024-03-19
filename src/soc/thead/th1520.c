@@ -443,7 +443,7 @@ static int th1520Selectablefd(int i) {
 }
 
 void th1520Init(void) {
-	soc_register(&th1520, "Thead", "TH1520");
+	soc_register(&th1520, "T-Head", "TH1520");
 
 	th1520->layout = layout;
 

@@ -66,7 +66,7 @@ static int milkv_melesSetup(void) {
 void milkv_melesInit(void) {
 	platform_register(&milkv_meles, "milkv_meles");
 
-	milkv_meles->soc = soc_get("Thead", "TH1520");
+	milkv_meles->soc = soc_get("T-Head", "TH1520");
 	milkv_meles->soc->setMap(map, _sizeof(map));
 
 	milkv_meles->digitalRead = milkv_meles->soc->digitalRead;

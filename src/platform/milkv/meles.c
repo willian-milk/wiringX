@@ -26,7 +26,7 @@ struct platform_t *milkv_meles = NULL;
 
 static int map[] = {
 	/*	GPIO0_17	I2S2_SCLK	GPIO2_25	GPIO2_24	*/
-			17,			-1,			89,			88,
+			17,			169,			89,			88,
 	/*	GPIO2_22	GPIO2_31	GPIO3_2	GPIO0_16	*/
 			86,			95,			98,			16,
 	/*	GPIO0_9	GPIO0_8	GPIO2_15	ADC	*/
@@ -37,10 +37,10 @@ static int map[] = {
 			65,			-1,			-1,			-1,
 	/*						GPIO2_23	GPIO3_1	GPIO0_11	*/
 			-1,			87,			97,			11,
-	/*	I2S2-LRCK	GPIO3_0	GPIO0_10	GPIO3_3	*/
-			-1,			96,			10,			99,
-	/*	I2S_DIN	I2S2_DOUT	GPIO2_12	GPIO2_11	*/
-			-1,			-1,			76,			75
+	/*	AOGPIO_7	GPIO3_0	GPIO0_10	GPIO3_3	*/
+			168,			96,			10,			99,
+	/*	AOGPIO_10	AOGPIO_11	GPIO2_12	GPIO2_11	*/
+			171,			172,			76,			75
 };
 
 #define _sizeof(arr) (sizeof(arr) / sizeof(arr[0]))

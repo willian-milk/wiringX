@@ -24,7 +24,6 @@
 #define GPIO_GROUP_COUNT 6
 #define PAD_GROUP_COUNT 4
 static uintptr_t pad_groups_reg[MAX_REG_AREA] = {0x0};
-// const static uintptr_t gpio_group_register_physical_address[MAX_REG_AREA] = {0xffec005fff, 0xffec006fff, 0xffe7f37fff, 0xffe7f3bfff, 0xfffff41fff};	// gpio base address
 const static uintptr_t gpio_group_register_physical_address[MAX_REG_AREA] = {0xffec005000, 0xffec006000, 0xffe7f34000, 0xffe7f38000, 0xfffff41000, 0xfffff52000};	// gpio base address
 const static uintptr_t pad_groups_register_physical_address[MAX_REG_AREA] = {0xfffff4a000, 0xffe7f3c000, 0xffec007000, 0xffcb01d000};	// pinmux base address
 #define GPIO_SWPORTA_DR			0x0000	// gpio data register offset

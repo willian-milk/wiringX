@@ -30,7 +30,7 @@ static int map[] = {
 	/*	GPIO2_22	GPIO2_31	GPIO3_2	GPIO0_16	*/
 			86,			95,			98,			16,
 	/*	GPIO0_9	GPIO0_8	GPIO2_15	ADC	*/
-			9,			8,			79,			-1,
+			8,			9,			79,			-1,
 	/*	GPIO2_16	GPIO2_17	GPIO2_14	GPIO2_0	*/
 			80,			81,			78,			64,
 	/*	GPIO2_1	*/
